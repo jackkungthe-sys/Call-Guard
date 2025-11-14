@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CallGuard - คำแนะนำเพิ่มเติม</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Noto Sans Thai", sans-serif;
+      background: linear-gradient(180deg, #B6E9D6 0%, #C1F2F4 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+
+    /* หัวข้อ */
+    h2 {
+      margin-top: 2rem;
+      color: #000;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 1rem;
+      color: #000;
+      margin-top: -0.3rem;
+      margin-bottom: 1rem;
+    }
+
+    /* กล่องรูปและข้อความ */
+    .card {
+      background: #fff;
+      border: 2px solid #60BFFD;
+      border-radius: 20px;
+      width: 80%;
+      max-width: 340px;
+      padding: 1rem 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .feature {
+      margin-bottom: 1.5rem;
+    }
+
+    .feature img {
+      width: 140px;
+      height: 140px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .feature p {
+      font-weight: 600;
+      color: #000;
+      margin-top: 0.5rem;
+    }
+
+    /* แถบสถานะด้านล่าง */
+    .progress {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    }
+
+    .dot {
+    width: 50px;
+    height: 8px;
+    background: #ffffff; /* สีเริ่มต้น = ขาว */
+    border-radius: 10px;
+    }
+
+    /* 🔹 จุดแรกให้เป็นสีฟ้า */
+    .dot:nth-child(1) {
+    background: #60BFFD; /* สีฟ้า */
+    }
+
+    /* 🔹 จุดที่ 2 และ 3 เป็นสีขาว */
+    .dot:nth-child(2),
+    .dot:nth-child(3) {
+    background: #ffffff;
+    }
+
+    /* ปุ่มด้านล่าง */
+    .bottom-bar {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      max-width: 340px;
+    }
+
+    .bottom-bar a {
+      text-decoration: none;
+      color: #007f73;
+      font-weight: 600;
+    }
+
+    .next-btn {
+      background: linear-gradient(180deg, #60BFFD 0%, #3CA2E2 100%);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease;
+    }
+
+    .next-btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h2>ให้ข้อมูลเพิ่มเติม<br>CallGuard</h2>
+
+  <div class="card">
+    <div class="feature">
+      <img src="logo/ICON (4).jpg" alt="อนุญาตการเข้าถึง">
+      <p>อนุญาตการเข้าถึงข้อมูล</p>
+    </div>
+    <div class="feature">
+      <img src="logo/ICON (1).jpg" alt="สมัครสมาชิก">
+      <p>สมัครสมาชิก</p>
+    </div>
+    <div class="feature">
+      <img src="logo/ICON (2).png" alt="เข้าสู่แอปพร้อมใช้งาน">
+      <p>เข้าสู่แอปพร้อมใช้งาน</p>
+    </div>
+  </div>
+
+  <div class="progress">
+    <div class="dot"></div>
+    <div class="dot active"></div>
+    <div class="dot"></div>
+  </div>
+  <div class="bottom-bar">
+    <!-- ข้าม → ไป tutorial5.html -->
+    <a href="tutorial5.html">ข้าม</a>
+
+    <!-- ปุ่มลูกศร → ไป tutorial3.html -->
+    <button class="next-btn" onclick="window.location.href='tutorial3.html'">➜</button>
+  </div>
+</body>
+</html>

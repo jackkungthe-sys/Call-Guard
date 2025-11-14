@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CallGuard - คำสัญญาและการยินยอม</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="main-container">
+    <div class="card">
+
+      <!-- 🔹 โลโก้ -->
+      <div class="logo-container">
+        <img src="logo/LOGO.png" alt="CallGuard Logo" class="logo">
+      </div>
+
+      <!-- 🔹 หัวข้อ -->
+      <h2>
+        คำสัญญาของแอปพลิเคชัน<br>
+        ที่มีต่อส่วนตัวของคุณ
+      </h2>
+
+      <!-- 🔹 เนื้อหา -->
+      <p class="intro">
+        CallGuard ให้ความสำคัญสูงสุดต่อความปลอดภัยและความเป็น
+        ส่วนตัวของผู้ใช้งาน เพื่อให้คุณสามารถใช้งานได้อย่างมั่นใจ ปลอดภัย และได้รับการปกป้องจากภัยคุกคามทางโทรศัพท์ เราขอให้คุณโปรดอ่าน
+        และทำความเข้าใจข้อตกลงในการให้บริการ และนโยบายความ
+        เป็นส่วนตัวของเราอย่างละเอียดก่อนดำเนินการต่อ
+        โดยการคลิก “ยอมรับและดำเนินการต่อ” หมายความว่าคุณได้อ่าน ทำความเข้าใจ และยอมรับเงื่อนไขในการให้บริการ รวมถึงนโยบายความเป็นส่วนตัวฉบับล่าสุดของ CallGuard แล้ว
+      </p>
+
+      <!-- 🔹 เงื่อนไข -->
+      <div class="agreement">
+        <p><strong>ยอมรับ</strong> 
+          <a href="#">เงื่อนไขในการให้บริการ</a> และ 
+          <a href="#">นโยบายความเป็นส่วนตัว</a> (จำเป็น)
+        </p>
+
+        <p><strong>ยอมรับข้อกำหนดต่อไปนี้ :</strong></p>
+        <ul>
+          <li>อนุญาตให้แอป CallGuard เข้ารวบรวมและวิเคราะห์เสียงพูดเพื่อป้องกันการหลอกลวง</li>
+          <li>อนุญาตให้ระบบเข้าถึงไมโครโฟนเพื่อฟังเสียงระหว่างใช้งาน</li>
+          <li>อนุญาตให้ระบบใช้การสั่นและแจ้งเตือนเมื่อพบพฤติกรรมที่น่าสงสัย</li>
+          <li>อนุญาตให้ระบบตรวจสอบข้อมูลเบอร์โทรศัพท์เพื่อประโยชน์ในการป้องกันภัย</li>
+          <li>ระบบจะไม่บันทึกเสียงหรือส่งต่อข้อมูลไปยังบุคคลภายนอก</li>
+        </ul>
+      </div>
+
+      <!-- 🔹 ส่วนล่าง (checkbox + ปุ่ม) -->
+      <div class="footer-section">
+        <label class="custom-checkbox">
+          <input type="checkbox" id="acceptAll">
+          <span class="checkmark"></span>
+          <strong>ยอมรับทั้งหมด</strong>
+        </label>
+        <button id="continueBtn">ยอมรับและดำเนินการต่อ</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 🎨 CSS -->
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans Thai", sans-serif;
+    background: linear-gradient(180deg, #B6E9D6 0%, #C1F2F4 100%);
+    color: #222;
+  }
+
+  /* ===== Layout ===== */
+  .main-container {
+    padding-bottom: 8rem; /* กันไม่ให้ footer ทับ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .card {
+  background: transparent; /* ไม่มีพื้น */
+  box-shadow: none;        /* เอาเงาออก */
+  border: none;            /* ไม่ต้องมีขอบ */
+  padding: 2rem;            /* เอา padding ล่างออก เพื่อให้ footer แนบเนียน */
+  }
+
+  /* ===== Logo ===== */
+  .logo-container {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .logo {
+    width: 140px;
+    height: auto;
+  }
+
+  /* ===== Header ===== */
+  h2 {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.4;
+    color: #000;
+    margin: 1rem 0;
+  }
+
+  .intro {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+    padding: 0 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .agreement {
+    background-color: transparent;
+    padding: 0 2rem;
+  }
+
+  .agreement ul {
+    margin: 0.8rem 0 0 1.2rem;
+    color: #444;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  a {
+    color: #003CFF;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* ===== Checkbox ===== */
+  .custom-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .custom-checkbox input {
+    display: none;
+  }
+
+  .checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #00A896;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .custom-checkbox input:checked + .checkmark {
+    background-color: #00A896;
+    border-color: #00A896;
+  }
+
+  .custom-checkbox input:checked + .checkmark::after {
+    content: "✓";
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  /* ===== ส่วนล่าง ===== */
+  .footer-section {
+  position: fixed;              /* ให้แปะล่างจอ */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;    /* พื้นสีขาว */
+  padding: 0.8rem 1rem 1rem;   /* 🔹 ปรับให้เตี้ยลง */
+  border-radius: 20px 20px 0 0; /* ขอบโค้งด้านบน */
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  }
+
+  /* ===== ปุ่ม ===== */
+  button {
+    display: block;
+    width: 90%;
+    margin: 1.2rem auto 0;
+    padding: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(180deg, #60BFFD 0%, #3CA2E2 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    margin-top: 0.5rem; /* จากเดิมอาจเป็น 1.2rem */
+  }
+
+  button:hover {
+    opacity: 0.85;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    .logo { width: 100px; }
+    h2 { font-size: 20px; }
+    .intro, .agreement { padding: 0 1rem; }
+  }
+  </style>
+
+  <!-- ⚙️ Script -->
+  <script>
+  continueBtn.addEventListener('click', () => {
+  if (!acceptAll.checked) return; // ถ้ายังไม่ติ๊ก จะไม่ไปหน้าใหม่
+  localStorage.setItem('permissionAccepted', 'true');
+  window.location.href = "permission.html"; // ไปหน้าถัดไปทันที
+  });
+  </script>
+</body>
+</html>
